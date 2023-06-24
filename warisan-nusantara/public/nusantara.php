@@ -1,27 +1,4 @@
-<?php
-
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Factory\AppFactory;
-
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/../config/createdb.php';
-require __DIR__ . '/../config/createtable.php';
-
-$app->get('/', function (Request $request, Response $response){
-    $response->getBody()->write("Hello World");
-    return $response;
-});
-
-//routes
-require __DIR__ . '/../routes/routes.php';
-
-$app->run();
-
-//once this file is run, run manually the json_mysql.php to insert data from collections.json to db
-?>
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -86,4 +63,4 @@ $app->run();
 
 <script src="script/additem.js"></script>
 
-</html> -->
+</html>
