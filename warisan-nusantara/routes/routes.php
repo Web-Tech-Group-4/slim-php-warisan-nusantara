@@ -7,6 +7,12 @@
 
     $app = AppFactory::create();
 
+    //display nusantara.html
+    $app->get('/', function (Request $request, Response $response){
+        $response->getBody()->write(file_get_contents('../public/nusantara.html'));
+        return $response;
+    });
+
     $app->get('/all', function (Request $request, Response $response){
         $sql = 'SELECT * FROM koleksi';
 
