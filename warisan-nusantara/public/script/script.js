@@ -2,7 +2,9 @@ $(document).ready(function () {
   
     //ajax
     $.ajax({
-      url: "/all",
+
+      //retrive.php
+      url: "/../config/retrieve.php",
       type: "get",
       success: function (data) {
         let semuaCollection = data.semuaCollection;
