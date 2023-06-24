@@ -1,0 +1,95 @@
+{
+    "semuaCollection" : [
+        {
+            "kategori": "weapons and arms",
+            "nama": "Keris Warisan Melayu",
+            "desc": "Senjata tradisional warisan melayu nusantara.",
+            "date": "tidak ternilai",
+            "gambar": "keris.jpg"
+        },
+        {
+            "kategori": "weapons and arms",
+            "nama": "tombak dan lembing",
+            "desc": "tombak dan lembing warisan nusantara",
+            "date": "1400 Hijrah",
+            "gambar": "tombak.jpg"
+        },
+        {
+            "kategori": "weapons and arms",
+            "nama": "Badik",
+            "desc": "lorem ipsum des tradis.",
+            "date": "1350 Hijrah",
+            "gambar": "badik.jpg"
+        },
+        {
+            "kategori": "weapons and arms",
+            "nama": "Sundang",
+            "desc": "Sundang.",
+            "date": "1300 Hijrah",
+            "gambar": "sundang.jpg"
+        },
+        {
+            "kategori": "weapons and arms",
+            "nama": "Kerambit",
+            "desc": "eni kraftangan yang telah lama wujud di kalangan masyarakat Malaysia.",
+            "date": "1240 Hijrah",
+            "gambar": "kerambit.jpg"
+        },
+        {
+            "kategori": "household items",
+            "nama": "congkak",
+            "desc": "congkak permainan tradisional",
+            "date": "1440 Hijrah",
+            "gambar": "congkak.png"
+        },
+        {
+            "kategori": "household items",
+            "nama": "tepak sirih",
+            "desc": "bagai pinang dibelah dua - peribahasa melayu",
+            "date": "1300 Hijrah1400 Hijrah",
+            "gambar": "tepakSirih.jpg"
+        },
+        {
+            "kategori": "textiles",
+            "nama": "songket tenun asli",
+            "desc": "lorem ipsum.",
+            "date": "1444 Hijrah",
+            "gambar": "songket.jpg"
+        },
+        {
+            "kategori": "textiles",
+            "nama": "Batik canting",
+            "desc": "batik canting lukisan tangan asli.",
+            "date": "1444 Hijrah",
+            "gambar": "batikCanting.jpg"
+        },
+        {
+            "kategori": "carving and woodworks",
+            "nama": "tunjuk langit",
+            "desc": "dipasang di bumbung rumah tradisional, menyimpan falsafah tersirat disebaliknya",
+            "date": "1330 Hijrah",
+            "gambar": "tunjukLangit.jpg"
+        },
+        {
+            "kategori": "carving and woodworks",
+            "nama": "ukiran kayu",
+            "desc": "ukiran tangan, material kayu cengal merah",
+            "date": "24000",
+            "gambar": "ukiranKayu.jpg"
+        },
+        {
+            "kategori": "carving and woodworks",
+            "nama": "to be completed",
+            "desc": "kosong",
+            "date": "none",
+            "gambar": "none.jpg"
+        },
+        {
+            "kategori": "carving and woodworks",
+            "nama": "Ukiran Iban",
+            "desc": "Ukiran oleh kaum Iban di Sarawak",
+            "date": "later",
+            "gambar": "ukiranIban.jpg"
+        }
+    ]
+}
