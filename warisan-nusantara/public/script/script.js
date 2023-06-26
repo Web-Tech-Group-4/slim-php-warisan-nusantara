@@ -4,7 +4,7 @@ $(document).ready(function () {
     $.ajax({
 
       //retrive.php
-      url: "/../config/retrieve.php",
+      url: "retrieve_bridge.php",
       type: "get",
       success: function (data) {
         let semuaCollection = data.semuaCollection;
