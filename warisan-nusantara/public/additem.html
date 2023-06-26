@@ -26,10 +26,10 @@
             <!--navbar collapse-navbar-->
             <div class="" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-
-                    <a class="nav-item nav-link active" href="#" data-category="all collections">all collections</a>
-                    <a class="nav-item nav-link" href="#" data-category="weapons and arms">weapons and arms</a>
-                    <a class="nav-item nav-link" href="#" data-category="household items">household items</a>
+                    <a class="nav-item nav-link active" href="additem.html" data-category="all collections">Add Item</a>
+                    <a class="nav-item nav-link" href="nusantara.php" data-category="all collections">all collections</a>
+                    <a class="nav-item nav-link" href="nusantara.php" data-category="weapons and arms">weapons and arms</a>
+                    <a class="nav-item nav-link" href="nusantara.php" data-category="household items">household items</a>
                     <a class="nav-item nav-link" href="#" data-category="textiles">textiles</a>
                     <a class="nav-item nav-link" href="#" data-category="carving and woodworks">carving and woodworks</a>
                 </div>
@@ -40,7 +40,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 id="view-collection">all collections</h1>
+                <h1 id="view-collection">add items</h1>
                 <div>
                     <form id="add-item-form" enctype="multipart/form-data">
                         <div class="mb-3"><label for="item-name" class="form-label">Item Name:</label><input type="text" class="form-control" id="item-name" name="item-name" required></div>
@@ -50,17 +50,15 @@
                         <div class="mb-3"><label for="item-image" class="form-label">Item Image:</label><input type="file" class="form-control" id="item-image" name="item-image" accept="image/*" required></div><button type="submit" class="btn btn-primary">Add Item</button>
                     </form>
                 </div>
+                
             </div>
         </div>
-        <div class="row" id="card-content">
-            <!--card content-->
-        </div>
+
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
-<script src="script/script.js"></script>
-
 <script src="script/additem.js"></script>
+<script src="script/script.js"></script>
 
 </html>

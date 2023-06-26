@@ -16,7 +16,7 @@ $app = AppFactory::create();
 // });
 
 $app->get('/', function (Request $request, Response $response){
-    $response->getBody()->write(file_get_contents('../public/nusantara.html'));
+    $response->getBody()->write(file_get_contents('../public/nusantara.php'));
     return $response;
 });
 

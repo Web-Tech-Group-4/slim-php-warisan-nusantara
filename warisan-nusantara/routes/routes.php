@@ -84,10 +84,10 @@
         $date = $request->getParsedBody()['date'];
         $gambar = $request->getParsedBody()['gambar'];
 
-        $sql = "INSERT INTO nusantara (nama, kategori, descript, date, gambar) VALUES (:nama, :kategori, :descript, :date, :gambar)";
+        $sql = "INSERT INTO koleksi (nama, kategori, descript, date, gambar) VALUES (:nama, :kategori, :descript, :date, :gambar)";
 
         try{
-            $db = new DB();
+            $db = new db();
             $conn = $db->connect();
 
             $stmt = $conn -> prepare($sql);
