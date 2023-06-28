@@ -30,8 +30,9 @@ $uploadDirectory = 'images/';
 $imageFileName = uniqid() . '_' . $imageName;
 
 // Move the uploaded image to the specified directory
-$uploadPath = $uploadDirectory . $imageFileName;
-move_uploaded_file($imageTmpName, $uploadPath);
+$uploadPath = $imageFileName;
+$directoryUpload = $uploadDirectory . $imageFileName;
+move_uploaded_file($imageTmpName, $directoryUpload);
 
 // Insert item details into the database
 $sql = "INSERT INTO koleksi (nama, kategori, descript, date, gambar) VALUES (?, ?, ?, ?, ?)";
