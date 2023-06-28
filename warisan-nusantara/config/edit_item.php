@@ -8,7 +8,7 @@ $dbname = "nusantara";
 $conn = new mysqli($host, $username, $password, $dbname);
 
 //check connection
-if($conn->connect_error){
+if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -17,6 +17,7 @@ $itemName = $_POST['item-name'];
 $itemCategory = $_POST['item-category'];
 $itemDate = $_POST['item-date'];
 $itemDescription = $_POST['item-description'];
+$itemId = $_POST['item-id'];
 
 // Handle image upload
 $imageName = $_FILES['item-image']['name'];
@@ -30,11 +31,13 @@ $uploadDirectory = 'images/';
 $imageFileName = uniqid() . '_' . $imageName;
 
 // Move the uploaded image to the specified directory
-$uploadPath = $uploadDirectory . $imageFileName;
-move_uploaded_file($imageTmpName, $uploadPath);
+$uploadPath = $imageFileName;
+$directoryUpload = $uploadDirectory . $imageFileName;
 
-// Check if any input is empty before updating the item
-if (!empty($itemName) || !empty($itemCategory) || !empty($itemDate) || !empty($itemDescription) || !empty($imageName)) {
+echo $itemId;
+
+// Check if item id is empty
+if (!empty($itemId)) {
     // Construct the update query based on the non-empty inputs
     $sql = "UPDATE koleksi SET ";
     $params = array();
@@ -58,10 +61,20 @@ if (!empty($itemName) || !empty($itemCategory) || !empty($itemDate) || !empty($i
     if (!empty($imageName)) {
         $sql .= "gambar = ?, ";
         $params[] = $uploadPath;
+        
+        //delete previous picture
+        $sql2 = "SELECT gambar FROM koleksi WHERE id = '" . $itemId . "'";
+        $result = $conn->query($sql2);
+        $row = $result->fetch_assoc();
+        $oldImage = $row['gambar'];
+        unlink($uploadDirectory . $oldImage);
     }
 
     // Remove the trailing comma and space from the query
     $sql = rtrim($sql, ', ');
+
+    // Add the condition to update only the row with matching item ID
+    $sql .= " WHERE id = '" . $itemId . "'";
 
     // Execute the update query with the provided parameters
     $stmt = $conn->prepare($sql);
@@ -71,15 +84,16 @@ if (!empty($itemName) || !empty($itemCategory) || !empty($itemDate) || !empty($i
     } else {
         $response = array('success' => false, 'message' => 'Error updating item');
     }
+
+    move_uploaded_file($imageTmpName, $directoryUpload);
     $stmt->close();
 } else {
-    // No inputs were provided, so don't perform any update
-    $response = array('success' => false, 'message' => 'No updates provided');
+    $response = array('success' => false, 'message' => 'No item ID provided');
 }
 
+
 // Return the JSON response
-header('Content-Type: application/json');
+// header('Content-Type: application/json');
 echo json_encode($response);
 
 mysqli_close($conn);
-?>

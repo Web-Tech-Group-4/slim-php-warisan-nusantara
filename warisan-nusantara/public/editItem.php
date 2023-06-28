@@ -73,7 +73,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1 id="view-collection">update items</h1>
+          <h1 id="view-collection">update items <?php echo $_GET['id']; ?></h1>
           <div>
             <form id="update-item-form" enctype="multipart/form-data">
               <div class="mb-3">
@@ -83,7 +83,6 @@
                   class="form-control"
                   id="item-name"
                   name="item-name"
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -94,7 +93,6 @@
                   class="form-control"
                   id="item-category"
                   name="item-category"
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -104,7 +102,6 @@
                   class="form-control"
                   id="item-date"
                   name="item-date"
-                  required
                 />
               </div>
               <div class="mb-3">
@@ -115,7 +112,6 @@
                   id="item-description"
                   name="item-description"
                   rows="4"
-                  required
                 ></textarea>
               </div>
               <div class="mb-3">
@@ -128,6 +124,8 @@
                   accept="image/*"
                 />
               </div>
+              <input type="hidden" id="item-id" name="item-id" value="<?php echo $_GET['id']; ?>" />
+
 
               <button type="submit" class="btn btn-primary">Update Item</button>
             </form>

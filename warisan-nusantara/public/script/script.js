@@ -26,7 +26,7 @@ $(document).ready(function () {
                 '</p><h5 class="card-title">Date:' +
                 koleksi.date +
                 '</h5><button class="btn btn-primary update-card mx-2" id="' +
-                koleksi.nama +
+                koleksi.id +
                 '">Update Details</button>' +
                 '<button class="btn btn-danger delete-card" data-id="' +
                 koleksi.nama +
@@ -46,7 +46,7 @@ $(document).ready(function () {
                 '</p><h5 class="card-title">Date:' +
                 koleksi.date +
                 '</h5><button class="btn btn-primary update-card mx-2" id="' +
-                koleksi.nama +
+                koleksi.id +
                 '">Update Details</button>' +
                 '<button class="btn btn-danger delete-card" data-id="' +
                 koleksi.nama +
@@ -72,9 +72,9 @@ $(document).ready(function () {
   });
 
   //edit card
-  function editCard(itemname) {
+  function editCard(itemid) {
     // Construct the URL to edititem.html with the item name as a query parameter
-    var editUrl = "edititem.html?name=" + encodeURIComponent(itemname);
+    var editUrl = "editItem.php?id=" + encodeURIComponent(itemid);
     
     // Navigate to edititem.html
     window.location.href = editUrl;
@@ -106,6 +106,7 @@ $(document).ready(function () {
   // Click event listener for "Go somewhere" button
   $(document).on("click", ".update-card", function () {
     var idValue = $(this).attr("id");
+    console.log("idValue:", idValue);
     editCard(idValue);
   });
 

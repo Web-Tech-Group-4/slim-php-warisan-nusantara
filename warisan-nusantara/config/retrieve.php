@@ -22,6 +22,7 @@ $semuaCollection = array();
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
     $koleksi = array(
+      "id" => $row["id"],
       "gambar" => $row["gambar"],
       "nama" => $row["nama"],
       "kategori" => $row["kategori"],
